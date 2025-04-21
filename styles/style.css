@@ -1,0 +1,96 @@
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+
+/* Style */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9e9e9;
+}
+
+#calculator {
+    width: 420px;
+    height: 600px;
+    background-color: #96abc0;
+    margin: auto;
+    padding: 5px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#calculator, .margin-element {
+    border-radius: 4px;
+    border: 4px solid #1d1d1d;
+}
+
+#calculator > div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 25%;
+    padding: 5px;
+}
+
+#calculator > .width-full {
+    flex-basis: 100%;
+}
+
+#calculator > .width-half {
+    flex-basis: 50%;
+}
+
+.margin-element {
+    background-color: #708090;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+}
+
+#calculator #display {
+    background-color: #8fbc8f;
+    justify-content: end;
+    padding: 0px 14px;
+    font-size: 70px;
+}
+
+.operation-button {
+    background-color: #bec856;
+}
+.special-button {
+    background-color: #4791e0;
+}
+.margin-element:not(#display):active {
+    background-color: #66727f;
+}
+#calculator .operation-button:active {
+    background-color: #a6ae4b;
+}
+#calculator .special-button:active {
+    background-color: #3f81c7;
+}
+.margin-element:not(#display).active {
+    background-color: #66727f;
+}
+#calculator .operation-button.active {
+    background-color: #a6ae4b;
+}
+#calculator .special-button.active {
+    background-color: #3f81c7;
+}
